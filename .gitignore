@@ -102,4 +102,4 @@ ENV/
 Django_admin/migrations
 log/
 db.sqlite3
-.idea
+.idea/

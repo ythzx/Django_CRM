@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--novalidate前端不验证-->
+    <form method="POST" novalidate>
+        {% csrf_token %}
+{#        {{ form.as_p }}#}
+        <p>用户名{{ form.user }} {{ form.user.errors.0 }}</p>
+        <p>邮箱{{ form.email }} {{ form.email.errors.0 }}</p>
+        <p>用户组{{ form.ug }} {{ form.ug.errors.0 }}</p>
+        <p>角色{{ form.m2m }} {{ form.m2m.errors.0 }}</p>
+        <input type="submit" value="提交">
+    </form>
+
+</body>
+</html>
